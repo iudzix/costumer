@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านขายของที่ระลึก 30 ปี คอมพิวเตอร์</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="costumer.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>ร้านขายของที่ระลึก 30 ปี สาขาวิชาวิทยาการคอมพิวเตอร์</h1>
+        
+        <label for="namecostumer">ชื่อ</label>
+        <input type="text" id="namecostumer" name="namecostumer" placeholder="กรุณากรอกชื่อ">
+        
+        <label for="lastnamecostumer">นามสกุล</label>
+        <input type="text" id="lastnamecostumer" name="lastnamecostumer" placeholder="กรุณากรอกนามสกุล">
+        
+        <label for="addresscostumer">ที่อยู่</label>
+        <div>
+            <textarea id="addresscostumer" name="addresscostumer" rows="4"
+                placeholder="กรุณากรอกที่อยู่ (หากสะดวกรับเองไม่จำเป็นต้องกรอก)" maxlength="5000"></textarea>
+        </div>
+        
+        <label for="phonecostumer">เบอร์โทร</label>
+        <input type="text" id="phonecostumer" name="phonecostumer" placeholder="กรุณากรอกเบอร์โทร">
+        
+        <div class="item-list-section">
+            <label for="item">รายการสินค้า</label>
+            
+            <label>
+                <input type="checkbox" name="item" value="shirt" class="form-checkbox">
+                <span>เสื้อ - 489 บาท</span>
+            </label>
+            <div id="shirt-details-container" class="item-details-container" style="display:none;">
+                <div class="color-select-container" data-item="shirt">
+                    <label>สีเสื้อ :</label>
+                    <select name="color-shirt">
+                        <option value="" selected>- เลือกสี -</option>
+                        <option value="white">ขาว</option>
+                        <option value="black">ดำ</option>
+                        <option value="blue">น้ำเงิน</option>
+                        <option value="gray">เทา</option>
+                    </select>
+                    <div class="selected-color"></div>
+                </div>
+
+                <div class="size-select-container" data-item="shirt" style="display:none;">
+                    <label>ขนาดเสื้อ :</label>
+                    <select name="size-shirt">
+                        <option value="">- เลือกขนาด -</option>
+                        <option value="xs">XS</option>
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                        <option value="xxl">XXL</option>
+                        <option value="3xl">3XL</option>
+                    </select>
+                    <div class="selected-size"></div>
+                </div>
+
+                <div class="quantity-input-container" data-item="shirt" style="display:none;">
+                    <label>จำนวน :</label>
+                    <input type="number" name="quantity-shirt" placeholder="จำนวน" min="1">
+                </div>
+            </div>
+
+            <label>
+                <input type="checkbox" name="item" value="bag" class="form-checkbox">
+                <span>กระเป๋า - 289 บาท</span>
+            </label>
+            <div id="bag-details-container" class="item-details-container" style="display:none;">
+                <div class="color-select-container" data-item="bag">
+                    <label>สีกระเป๋า :</label>
+                    <select name="color-bag">
+                        <option value="">- เลือกสี -</option>
+                        <option value="white">ขาว</option>
+                        <option value="black">ดำ</option>
+                        <option value="blue">น้ำเงิน</option>
+                        <option value="gray">เทา</option>
+                        <option value="yellow">เหลือง</option>
+                    </select>
+                    <div class="selected-color"></div>
+                </div>
+                <div class="quantity-input-container" data-item="bag" style="display:none;">
+                    <label>จำนวน :</label>
+                    <input type="number" name="quantity-bag" placeholder="จำนวน" min="1">
+                </div>
+            </div>
+
+            <label>
+                <input type="checkbox" name="item" value="glass" class="form-checkbox">
+                <span>แก้วน้ำ - 79 บาท</span>
+            </label>
+            <div id="glass-details-container" class="item-details-container" style="display:none;">
+                <div class="color-select-container" data-item="glass">
+                    <label>สีแก้วน้ำ :</label>
+                    <select name="color-glass">
+                        <option value="">- เลือกสี -</option>
+                        <option value="white">ขาว</option>
+                        <option value="pink">ชมพู</option>
+                        <option value="blue">น้ำเงิน</option>
+                        <option value="yellow">เหลือง</option>
+                    </select>
+                    <div class="selected-color"></div>
+                </div>
+                <div class="quantity-input-container" data-item="glass" style="display:none;">
+                    <label>จำนวน :</label>
+                    <input type="number" name="quantity-glass" placeholder="จำนวน" min="1">
+                </div>
+            </div>
+
+            <label>
+                <input type="checkbox" name="item" value="cap" class="form-checkbox">
+                <span>หมวก - 189 บาท</span>
+            </label>
+            <div id="cap-details-container" class="item-details-container" style="display:none;">
+                <div class="color-select-container" data-item="cap">
+                    <label>สีหมวก :</label>
+                    <select name="color-cap">
+                        <option value="">- เลือกสี -</option>
+                        <option value="white">ขาว</option>
+                        <option value="black">ดำ</option>
+                        <option value="blue">น้ำเงิน</option>
+                        <option value="gray">เทา</option>
+                    </select>
+                    <div class="selected-color"></div>
+                </div>
+                <div class="quantity-input-container" data-item="cap" style="display:none;">
+                    <label>จำนวน :</label>
+                    <input type="number" name="quantity-cap" placeholder="จำนวน" min="1">
+                </div>
+            </div>
+
+            <label>
+                <input type="checkbox" name="item" value="umbrella" class="form-checkbox">
+                <span>ร่ม - 149 บาท</span>
+            </label>
+            <div id="umbrella-details-container" class="item-details-container" style="display:none;">
+                <div class="color-select-container" data-item="umbrella">
+                    <label>สีร่ม :</label>
+                    <select name="color-umbrella">
+                        <option value="">- เลือกสี -</option>
+                        <option value="white">ขาว</option>
+                        <option value="black">ดำ</option>
+                    </select>
+                    <div class="selected-color"></div>
+                </div>
+                <div class="quantity-input-container" data-item="umbrella" style="display:none;">
+                    <label>จำนวน :</label>
+                    <input type="number" name="quantity-umbrella" placeholder="จำนวน" min="1">
+                </div>
+            </div>
+
+            <label>
+                <input type="checkbox" name="item" value="brooch" class="form-checkbox">
+                <span>เข็มกลัด - 39 บาท</span>
+            </label>
+            <div id="brooch-details-container" class="item-details-container" style="display:none;">
+                <div class="quantity-input-container" data-item="brooch">
+                    <label>จำนวน :</label>
+                    <input type="number" name="quantity-brooch" placeholder="จำนวน" min="1">
+                </div>
+            </div>
+
+            <label>
+                <input type="checkbox" name="item" value="book" class="form-checkbox">
+                <span>สมุด - 69 บาท</span>
+            </label>
+            <div id="book-details-container" class="item-details-container" style="display:none;">
+                <div class="color-select-container" data-item="book">
+                    <label>สีสมุด:</label>
+                    <select name="color-book">
+                        <option value="">- เลือกสี -</option>
+                        <option value="black">ดำ</option>
+                        <option value="blue">น้ำเงิน</option>
+                    </select>
+                    <div class="selected-color"></div>
+                </div>
+                <div class="quantity-input-container" data-item="book" style="display:none;">
+                    <label>จำนวน :</label>
+                    <input type="number" name="quantity-book" placeholder="จำนวน" min="1">
+                </div>
+            </div>
+
+            <label>
+                <input type="checkbox" name="item" value="pen" class="form-checkbox">
+                <span>ปากกา - 29 บาท</span>
+            </label>
+            <div id="pen-details-container" class="item-details-container" style="display:none;">
+                <div class="color-select-container" data-item="pen">
+                    <label>สีปากกา:</label>
+                    <select name="color-pen">
+                        <option value="">- เลือกสี -</option>
+                        <option value="black">ดำ</option>
+                        <option value="blue">น้ำเงิน</option>
+                    </select>
+                    <div class="selected-color"></div>
+                </div>
+                <div class="quantity-input-container" data-item="pen" style="display:none;">
+                    <label>จำนวน :</label>
+                    <input type="number" name="quantity-pen" placeholder="จำนวน" min="1">
+                </div>
+            </div>
+
+            <script>
+                const images = {
+                    shirt: [
+                        { src: "/image/frontshirt.jpg", alt: "frontshirt" },
+                        { src: "/image/backshirt.jpg", alt: "backshirt" }
+                    ],
+                    bag: [
+                        { src: "/image/bag.jpg", alt: "bag" }
+                    ],
+                    glass: [
+                        { src: "/image/glass.jpg", alt: "glass" }
+                    ],
+                    cap: [
+                        { src: "/image/cap.jpg", alt: "cap" }
+                    ],
+                    umbrella: [
+                        { src: "/image/umbrella.jpg", alt: "umbrella" }
+                    ],
+                    brooch: [
+                        { src: "/image/brooch.jpg", alt: "brooch" }
+                    ],
+                    book: [
+                        { src: "/image/book.jpg", alt: "book" }
+                    ],
+                    pen: [
+                        { src: "/image/pen.jpg", alt: "pen" }
+                    ]
+                };
+
+                function createAndInjectImage(itemValue, targetContainer) {
+                    let imgContainer = document.getElementById(`${itemValue}-image-preview`);
+                    if (imgContainer) {
+                        imgContainer.style.display = '';
+                    } else {
+                        imgContainer = document.createElement('div');
+                        imgContainer.id = `${itemValue}-image-preview`;
+                        imgContainer.className = 'item-image-preview';
+
+                        if (images[itemValue]) {
+                            const imageWrapper = document.createElement('div');
+                            imageWrapper.className = 'image-flex';
+                            images[itemValue].forEach(img => {
+                                const image = document.createElement('img');
+                                image.src = img.src;
+                                image.alt = img.alt;
+                                imageWrapper.appendChild(image);
+                            });
+                            imgContainer.appendChild(imageWrapper);
+
+                            const caption = document.createElement('div');
+                            caption.textContent = "ภาพสินค้าตัวอย่าง";
+                            caption.className = "caption";
+                            imgContainer.appendChild(caption);
+                        }
+                        targetContainer.prepend(imgContainer);
+                    }
+                }
+
+                function handleItemCheckboxChange(event) {
+                    const checkbox = event.target;
+                    const itemValue = checkbox.value;
+                    const detailsContainer = document.getElementById(`${itemValue}-details-container`);
+                    const colorSelectContainer = detailsContainer ? detailsContainer.querySelector('.color-select-container') : null;
+                    const sizeSelectContainer = detailsContainer ? detailsContainer.querySelector('.size-select-container') : null;
+                    const quantityContainer = detailsContainer ? detailsContainer.querySelector('.quantity-input-container') : null;
+                    const imagePreview = document.getElementById(`${itemValue}-image-preview`);
+
+                    if (checkbox.checked) {
+                        if (detailsContainer) {
+                            detailsContainer.style.display = 'block';
+                            createAndInjectImage(itemValue, detailsContainer);
+
+                            if (itemValue === 'brooch') {
+                                if (quantityContainer) quantityContainer.style.display = 'block';
+                                if (colorSelectContainer) colorSelectContainer.style.display = 'none';
+                                if (sizeSelectContainer) sizeSelectContainer.style.display = 'none';
+                            } else {
+                                if (colorSelectContainer) colorSelectContainer.style.display = 'block';
+                                if (sizeSelectContainer) sizeSelectContainer.style.display = 'none';
+                                if (quantityContainer) quantityContainer.style.display = 'none';
+                            }
+                        }
+                    } else {
+                        if (detailsContainer) {
+                            detailsContainer.style.display = 'none';
+                            if (imagePreview) {
+                                imagePreview.remove();
+                            }
+
+                            const selects = detailsContainer.querySelectorAll('select');
+                            selects.forEach(select => {
+                                select.value = '';
+                            });
+                            const inputs = detailsContainer.querySelectorAll('input[type="number"]');
+                            inputs.forEach(input => {
+                                input.value = '';
+                            });
+                            const selectedColorText = detailsContainer.querySelector('.selected-color');
+                            if (selectedColorText) selectedColorText.textContent = '';
+                            const selectedSizeText = detailsContainer.querySelector('.selected-size');
+                            if (selectedSizeText) selectedSizeText.textContent = '';
+                        }
+                    }
+                }
+
+                function handleColorSelection(e) {
+                    const select = e.target;
+                    const detailsContainer = select.closest('.item-details-container');
+                    const itemValue = detailsContainer.id.replace('-details-container', '');
+
+                    const colorTextElement = detailsContainer.querySelector('.selected-color');
+                    const sizeSelectContainer = detailsContainer.querySelector('.size-select-container');
+                    const quantityContainer = detailsContainer.querySelector('.quantity-input-container');
+                    const sizeSelect = sizeSelectContainer ? sizeSelectContainer.querySelector('select') : null;
+                    const quantityInput = quantityContainer ? quantityContainer.querySelector('input[type="number"]') : null;
+
+                    colorTextElement.textContent = select.value ? `สีที่เลือก: ${select.options[select.selectedIndex].text}` : '';
+
+                    if (itemValue === 'shirt') {
+                        if (select.value) {
+                            if (sizeSelectContainer) sizeSelectContainer.style.display = 'block';
+                            if (sizeSelect) sizeSelect.value = '';
+                            if (quantityContainer) quantityContainer.style.display = 'none';
+                            if (quantityInput) quantityInput.value = '';
+                            const selectedSizeText = detailsContainer.querySelector('.selected-size');
+                            if (selectedSizeText) selectedSizeText.textContent = '';
+                        } else {
+                            if (sizeSelectContainer) sizeSelectContainer.style.display = 'none';
+                            if (quantityContainer) quantityContainer.style.display = 'none';
+                            if (sizeSelect) sizeSelect.value = '';
+                            if (quantityInput) quantityInput.value = '';
+                            const selectedSizeText = detailsContainer.querySelector('.selected-size');
+                            if (selectedSizeText) selectedSizeText.textContent = '';
+                        }
+                    } else {
+                        if (select.value) {
+                            if (quantityContainer) quantityContainer.style.display = 'block';
+                        } else {
+                            if (quantityContainer) {
+                                quantityContainer.style.display = 'none';
+                                if (quantityInput) quantityInput.value = '';
+                            }
+                        }
+                    }
+                }
+
+                function handleSizeSelection(e) {
+                    const select = e.target;
+                    const detailsContainer = select.closest('.item-details-container');
+                    const selectedSizeText = detailsContainer.querySelector('.selected-size');
+                    const quantityContainer = detailsContainer.querySelector('.quantity-input-container');
+                    const quantityInput = quantityContainer ? quantityContainer.querySelector('input[type="number"]') : null;
+
+                    selectedSizeText.textContent = select.value ? `ขนาดที่เลือก: ${select.options[select.selectedIndex].text}` : '';
+
+                    if (select.value) {
+                        if (quantityContainer) quantityContainer.style.display = 'block';
+                    } else {
+                        if (quantityContainer) {
+                            quantityContainer.style.display = 'none';
+                            if (quantityInput) quantityInput.value = '';
+                        }
+                    }
+                }
+
+                document.querySelectorAll('input[name="item"]').forEach(checkbox => {
+                    checkbox.addEventListener('change', handleItemCheckboxChange);
+                });
+
+                document.querySelectorAll('.color-select-container select').forEach(select => {
+                    select.addEventListener('change', handleColorSelection);
+                });
+
+                document.querySelectorAll('.size-select-container select').forEach(select => {
+                    select.addEventListener('change', handleSizeSelection);
+                });
+
+                window.addEventListener('DOMContentLoaded', () => {
+                    document.querySelectorAll('input[name="item"]').forEach(checkbox => {
+                        if (checkbox.checked) {
+                            const event = new Event('change');
+                            checkbox.dispatchEvent(event);
+                        }
+                    });
+                });
+            </script>
+        </div>
+        
+        <label for="delivery">เลือกจัดส่งหรือรับเอง</label>
+        <div class="delivery-options">
+            <label>
+                <input type="radio" name="delivery" value="delivery" class="form-radio">
+                <span>จัดส่ง</span>
+            </label>
+            <label>
+                <input type="radio" name="delivery" value="pickup" class="form-radio">
+                <span>รับเอง</span>
+            </label>
+        </div>
+        
+        <div>
+            <label for="waytopay">ช่องทางการชำระเงิน</label>
+            <select id="waytopay" name="waytopay">
+                <option value="" selected>- เลือกช่องทางการชำระเงิน -</option>
+                <option value="bank">โอนเงินผ่านธนาคาร</option>
+                <option value="cash">ชำระเงินสด</option>
+                <option value="creditcard">บัตรเครดิต</option>
+            </select>
+        </div>
+        
+        <div id="productimagepay-container" style="display:none;">
+            <label for="productimagepay">หลักฐานยืนยันการโอน</label>
+            <input type="file" name="productimagepay" id="productimagepay" accept="image/*">
+        </div>
+        <script>
+            document.getElementById('waytopay').addEventListener('change', function () {
+                const payContainer = document.getElementById('productimagepay-container');
+                if (this.value === 'bank') {
+                    payContainer.style.display = 'block';
+                } else {
+                    payContainer.style.display = 'none';
+                }
+            });
+        </script>
+        
+        <label for="startdate">วันที่สั่งซื้อ</label>
+        <input type="date" name="startdate" id="startdate">
+        
+        <div class="button-group">
+            <input type="submit" value="สั่งซื้อ">
+            <input type="reset" value="ยกเลิก">
+        </div>
+    </div>
+</body>
+
+</html>

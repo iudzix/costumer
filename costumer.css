@@ -1,0 +1,259 @@
+ body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #e3f2fd;
+            color: #1a237e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            font-family: 'Prompt', sans-serif;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            width: 95%;
+            max-width: 650px;
+            margin: auto;
+            border: 2px solid #90caf9;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        h1 {
+            font-family: 'Prompt', sans-serif;
+            color: #283593;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2.4em;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+        }
+
+        label {
+            font-family: 'Prompt', sans-serif;
+            display: block;
+            margin-bottom: 8px;
+            color: #303f9f;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        label[for="namecostumer"],
+        label[for="lastnamecostumer"],
+        label[for="addresscostumer"],
+        label[for="phonecostumer"],
+        label[for="item"],
+        label[for="delivery"],
+        label[for="waytopay"],
+        label[for="startdate"] {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a237e;
+            text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.08);
+            margin-top: 25px;
+        }
+
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        textarea,
+        select {
+            font-family: 'Prompt', sans-serif;
+            width: calc(100% - 22px);
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #bbdefb;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1em;
+            color: #1a237e;
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #64b5f6;
+            box-shadow: 0 0 8px rgba(100, 181, 246, 0.4);
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .item-list-section label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-checkbox {
+            margin-right: 10px;
+            accent-color: #3f51b5;
+            width: 20px;
+            height: 20px;
+        }
+        .form-checkbox + span {
+            font-family: 'Prompt', sans-serif;
+            font-size: 1.05em;
+            color: #303f9f;
+        }
+
+        .item-details-container {
+            margin-left: 25px;
+            padding: 18px;
+            border-left: 4px solid #90caf9;
+            border-radius: 0 8px 8px 0;
+            background-color: #e8eaf6;
+            margin-top: -5px;
+            margin-bottom: 15px;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .color-select-container,
+        .size-select-container,
+        .quantity-input-container {
+            margin-bottom: 12px;
+        }
+        .color-select-container label,
+        .size-select-container label,
+        .quantity-input-container label {
+            font-family: 'Prompt', sans-serif;
+            margin-bottom: 5px;
+            font-weight: 400;
+            color: #424242;
+            font-size: 1em;
+        }
+
+        .item-image-preview {
+            margin-top: 15px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #c5cae9;
+            margin-bottom: 15px;
+        }
+
+        .item-image-preview .image-flex {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .item-image-preview img {
+            max-width: 120px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #cfd8dc;
+        }
+
+        .item-image-preview .caption {
+            font-family: 'Prompt', sans-serif;
+            font-size: 0.9em;
+            color: #5c6bc0;
+            margin-top: 8px;
+        }
+
+        .selected-color, .selected-size {
+            font-family: 'Prompt', sans-serif;
+            font-size: 0.95em;
+            color: #4fc3f7;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        .delivery-options {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .delivery-options label {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 25px;
+            margin-bottom: 0;
+        }
+
+        .form-radio {
+            accent-color: #3f51b5;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .form-radio + span {
+            font-family: 'Prompt', sans-serif;
+            font-size: 1.05em;
+            color: #303f9f;
+        }
+
+        #productimagepay-container {
+            margin-top: 20px;
+            background-color: #fce4ec;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px dashed #f48fb1;
+        }
+
+        input[type="file"] {
+            font-family: 'Prompt', sans-serif;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #f8bbd0;
+            border-radius: 8px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .button-group {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            font-family: 'Prompt', sans-serif;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+            min-width: 120px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(69, 160, 73, 0.5);
+        }
+
+        input[type="reset"] {
+            background-color: #e0e0e0;
+            color: #616161;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="reset"]:hover {
+            background-color: #c0c0c0;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
